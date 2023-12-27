@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <title>Quản lý nhân khẩu</title>
+</head>
+
+<body>
+
+    <h2>Quản lý nhân khẩu</h2>
+
+    <form id="userInfoForm" class="form-grid">
+        <div class="form-column">
+            <label for="fullName">Họ và tên:</label>
+            <input type="text" id="fullName" required>
+
+            <label for="dob">Ngày tháng năm sinh:</label>
+            <div class="dob-inputs">
+                <input type="number" id="day" placeholder="Ngày" min="1" max="31" required>
+                <input type="number" id="month" placeholder="Tháng" min="1" max="12" required>
+                <input type="number" id="year" placeholder="Năm" min="1900" max="2100" required>
+            </div>
+
+            <label for="gender">Giới tính:</label>
+            <select id="gender" required>
+                <option value="male">Nam</option>
+                <option value="female">Nữ</option>
+            </select>
+
+            <label for="placeOfBirth">Nơi sinh:</label>
+            <input type="text" id="placeOfBirth" required>
+
+            <label for="hometown">Quê quán:</label>
+            <input type="text" id="hometown" required>
+
+            
+        </div>
+
+        <div class="form-column">
+            <label for="ethnicity">Dân tộc:</label>
+            <input type="text" id="ethnicity" required>
+
+            <label for="religion">Tôn giáo:</label>
+            <input type="text" id="religion" required>
+
+            <label for="nationality">Quốc tịch:</label>
+            <input type="text" id="nationality" required>
+
+            <label for="idCard">CMND:</label>
+            <input type="text" id="idCard" required>
+
+            <label for="passport">Hộ chiếu:</label>
+            <input type="text" id="passport" required>
+
+            
+        </div>
+
+        <div class="form-column">
+            <label for="permanentAddress">Nơi thường trú:</label>
+            <input type="text" id="permanentAddress" required>
+
+            <label for="currentAddress">Địa chỉ ở hiện nay:</label>
+            <input type="text" id="currentAddress" required>
+
+            <label for="education">Trình độ học vấn:</label>
+            <input type="text" id="education" required>
+
+            <label for="occupation">Nghề nghiệp:</label>
+            <input type="text" id="occupation" required>
+
+            <label for="workPlace">Nơi làm việc:</label>
+            <input type="text" id="workPlace" required>
+
+            <button type="button" onclick="addUser()">Thêm</button>
+        </div>
+
+       
+    </form>
+
+    <div>
+        <label for="searchInput">Tìm kiếm:</label>
+        <input type="text" id="searchInput" oninput="searchUser()">
+        <button type="button" onclick="searchUser()">Tìm kiếm</button>
+    </div>
+
+    <table id="userTable">
+        <thead>
+            <tr>
+                <th>Họ và tên</th>
+                <th>Ngày tháng năm sinh</th>
+                <th>Giới tính</th>
+                <th>Nơi sinh</th>
+                <th>Quê quán</th>
+                <th>Dân tộc</th>
+                <th>Tôn giáo</th>
+                <th>Quốc tịch</th>
+                <th>CMND</th>
+                <th>Hộ chiếu</th>
+                <th>Nơi thường trú</th>
+                <th>Địa chỉ ở hiện nay</th>
+                <th>Trình độ học vấn</th>
+                <th>Nghề nghiệp</th>
+                <th>Nơi làm việc</th>
+                <th>Thao tác</th>
+            </tr>
+        </thead>
+        <tbody id="userList">
+        </tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

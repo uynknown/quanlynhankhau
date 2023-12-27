@@ -1,0 +1,98 @@
+/* Thêm đoạn mã CSS Grid ở đây */
+/* Thêm đoạn mã CSS Grid ở đây */
+form {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    max-width: 900px;
+    margin: auto; /* Center the form horizontally */
+}
+
+
+/* Style for the first column */
+#userInfoForm > div:nth-child(3n-2) {
+    grid-column: 1 / span 1;
+}
+
+/* Style for the second column */
+#userInfoForm > div:nth-child(3n-1) {
+    grid-column: 2 / span 1;
+}
+
+/* Style for the third column */
+#userInfoForm > div:nth-child(3n) {
+    grid-column: 3 / span 1;
+}
+
+.dob-inputs {
+    display: flex;
+    gap: 10px;
+}
+
+/* Style for day, month, and year input fields */
+.dob-inputs input {
+    width: calc(33.33% - 6.67px); /* 33.33% width for each input with 10px gap */
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #4caf50;
+    color: #fff;
+}
+
+td {
+    background-color: #f9f9f9;
+}
+
+input[type="text"],
+input[type="date"],
+select {
+    width: calc(100% - 10px); /* Adjust the width as needed */
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Style for input labels */
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Style for input fields */
+input,
+select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
